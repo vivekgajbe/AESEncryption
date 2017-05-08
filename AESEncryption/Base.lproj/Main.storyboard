@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AESEncryption" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CM-E4-VQF">
+                                <rect key="frame" x="175" y="193" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ITl-EP-4FZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="vUT-98-LY7"/>
+                                </constraints>
+                                <state key="normal" title="Encrypt text"/>
+                                <connections>
+                                    <action selector="EncryptText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHr-rC-pYw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2y-B8-734">
+                                <rect key="frame" x="175" y="267" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7vE-M9-8sq"/>
+                                    <constraint firstAttribute="width" constant="250" id="Ne9-Hg-5um"/>
+                                </constraints>
+                                <state key="normal" title="Decrypt text"/>
+                                <connections>
+                                    <action selector="decryptText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhG-W4-eSM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxe-EI-6cj">
+                                <rect key="frame" x="175" y="69" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CbQ-R8-YRf"/>
+                                    <constraint firstAttribute="width" constant="250" id="rAh-UO-8Ye"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9CM-E4-VQF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0FY-mV-CUw"/>
+                            <constraint firstItem="t2y-B8-734" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6AI-wz-xi4"/>
+                            <constraint firstItem="t2y-B8-734" firstAttribute="top" secondItem="9CM-E4-VQF" secondAttribute="bottom" constant="44" id="h75-hc-xZt"/>
+                            <constraint firstItem="nxe-EI-6cj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="sQ0-Mx-oLY"/>
+                            <constraint firstItem="nxe-EI-6cj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZl-fQ-b2C"/>
+                            <constraint firstItem="9CM-E4-VQF" firstAttribute="top" secondItem="nxe-EI-6cj" secondAttribute="bottom" constant="94" id="zud-Zx-pDU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtName" destination="nxe-EI-6cj" id="G3h-rz-7jL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+    </scenes>
+</document>
